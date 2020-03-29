@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button onClick="init(this);">Start!</button>
+    <h1>Current Time</h1>
+    <h2 id="currTime">00:00</h2>
+    <h1>Next Drop</h1>
+    <h2 id="nextDrop">00:00</h2>
+
+    <!-- sound -->
+    <div id="sound" style="display:none;">
+      <audio
+        src="../shared/boomCut.mp3"
+        autoplay="false"
+        muted="true"
+        type="audio/mp3"
+        id="boom"
+        loop="false"
+      ></audio>
+    </div>
+
+    <script src="musicLoader.js"></script>
+    <script src="karma.js"></script>
+  </body>
+</html>
