@@ -35,17 +35,20 @@ function init(btn){
     while(new Date() > dts[nextDropIndex]){
         nextDropIndex++;
     }
+    if(nextDropIndex < dts.length){
+        loop();
+    }
 
-    loop();
 }
 
 function loop(){
 
     const currentTime = new Date();
-
+    console.log("curr");
     setClockDisplay(currentTimeDisplay, currentTime, DELIMITER);
 
     const nextDrop = dts[nextDropIndex];
+    console.log("nextDrop");
     setClockDisplay(nextDropDisplay, nextDrop, DELIMITER);
 
     if(currentTime > nextDrop){
